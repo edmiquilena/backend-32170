@@ -5,9 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "benchmark": "node benchmark.js",
-    "start": "0x profiler.js"
+    "start": "node main.js"
   },
   "keywords": [],
   "author": "",
