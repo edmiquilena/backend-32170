@@ -1,0 +1,413 @@
+Statistical profiling result from nonbloq-log.log, (1022 ticks, 2 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     21    2.1%          /usr/lib/system/libsystem_pthread.dylib
+     11    1.1%          /usr/lib/system/libsystem_c.dylib
+      8    0.8%          /usr/lib/system/libsystem_kernel.dylib
+      4    0.4%          /usr/lib/libc++.1.dylib
+      3    0.3%          /usr/lib/system/libsystem_malloc.dylib
+      1    0.1%          /usr/lib/system/libsystem_platform.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      2    0.2%    0.2%  LazyCompile: *normalizeString node:path:66:25
+      1    0.1%    0.1%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.1%    0.1%  RegExp: (\[[^[\]]*])
+      1    0.1%    0.1%  LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      1    0.1%    0.1%  Function: ^processTicksAndRejections node:internal/process/task_queues:67:35
+      1    0.1%    0.1%  Function: ^nextTick node:internal/process/task_queues:103:18
+      1    0.1%    0.1%  Function: ^isTraceHTTPEnabled node:internal/http:40:28
+      1    0.1%    0.1%  Function: ^fresh /Users/eduardo/coder/backend-32170/node_modules/fresh/index.js:33:16
+      1    0.1%    0.1%  Function: ^format /Users/eduardo/coder/backend-32170/node_modules/content-type/index.js:65:17
+      1    0.1%    0.1%  Function: ^finalhandler /Users/eduardo/coder/backend-32170/node_modules/finalhandler/index.js:77:23
+      1    0.1%    0.1%  Function: ^ReadableState node:internal/streams/readable:83:23
+      1    0.1%    0.1%  Function: ^Readable.read node:internal/streams/readable:402:35
+      1    0.1%    0.1%  Function: ^IncomingMessage node:_http_incoming:53:25
+      1    0.1%    0.1%  Function: ^<anonymous> node:internal/validators:419:42
+
+ [C++]:
+   ticks  total  nonlib   name
+    612   59.9%   62.8%  T _posix_spawn_file_actions_adddup2
+    233   22.8%   23.9%  T node::contextify::ContextifyScript::~ContextifyScript()
+     39    3.8%    4.0%  T node::builtins::BuiltinLoader::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     19    1.9%    2.0%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     18    1.8%    1.8%  T _semaphore_destroy
+      9    0.9%    0.9%  T _mach_get_times
+      5    0.5%    0.5%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.4%    0.4%  T _issetugid
+      3    0.3%    0.3%  T _kdebug_trace_string
+      3    0.3%    0.3%  T __simple_getenv
+      2    0.2%    0.2%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      2    0.2%    0.2%  t ___pfz_setup
+      1    0.1%    0.1%  t void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      1    0.1%    0.1%  t node::Environment::StartProfilerIdleNotifier()::$_6::__invoke(uv_check_s*)
+      1    0.1%    0.1%  T node::loader::ModuleWrap::Instantiate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  T node::InternalCallbackScope::InternalCallbackScope(node::Environment*, v8::Local<v8::Object>, node::async_context const&, int)
+      1    0.1%    0.1%  T _thread_destruct_special_reply_port
+      1    0.1%    0.1%  T _mach_port_construct
+      1    0.1%    0.1%  T _host_request_notification
+
+ [Summary]:
+   ticks  total  nonlib   name
+     15    1.5%    1.5%  JavaScript
+    957   93.6%   98.3%  C++
+     28    2.7%    2.9%  GC
+     48    4.7%          Shared libraries
+      2    0.2%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    205   69.5%   20.1%  T node::contextify::ContextifyScript::~ContextifyScript()
+     39   13.2%    3.8%  T node::builtins::BuiltinLoader::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     19    6.4%    1.9%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     10    3.4%    1.0%  T _semaphore_destroy
+      8    2.7%    0.8%  T node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+      5    1.7%    0.5%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.7%    0.2%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      1    0.3%    0.1%  t void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.3%    0.1%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      1    0.3%    0.1%  T node::loader::ModuleWrap::Instantiate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.3%    0.1%  T _thread_destruct_special_reply_port
+      1    0.3%    0.1%  T _mach_port_construct
+      1    0.3%    0.1%  T _mach_get_times
+      1    0.3%    0.1%  T __simple_getenv
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    612   59.9%  T _posix_spawn_file_actions_adddup2
+
+    233   22.8%  T node::contextify::ContextifyScript::~ContextifyScript()
+     37   15.9%    LazyCompile: ~pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+     37  100.0%      LazyCompile: ~<anonymous> file:///Users/eduardo/coder/backend-32170/clase-32/profiler.js:5:21
+     37  100.0%        LazyCompile: ~handle /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/layer.js:86:49
+     37  100.0%          LazyCompile: ~next /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/route.js:116:16
+     37  100.0%            LazyCompile: ~dispatch /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/route.js:98:45
+     10    4.3%    Function: ^writevGeneric node:internal/stream_base_commons:122:23
+     10  100.0%      Function: ^Socket._writeGeneric node:net:897:42
+     10  100.0%        Function: ^Socket._writev node:net:929:36
+     10  100.0%          Function: ^doWrite node:internal/streams/writable:401:17
+     10  100.0%            Function: ^clearBuffer node:internal/streams/writable:532:21
+     10    4.3%    Function: ^readSync node:fs:705:18
+      9   90.0%      Function: ^tryReadSync node:fs:444:21
+      9  100.0%        Function: ^readFileSync node:fs:465:22
+      6   66.7%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      5   83.3%            Function: ^Module.load node:internal/modules/cjs/loader:1069:33
+      1   16.7%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:1069:33
+      3   33.3%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      3  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1069:33
+      1   10.0%      LazyCompile: ~tryReadSync node:fs:444:21
+      1  100.0%        LazyCompile: ~readFileSync node:fs:465:22
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:1069:33
+      6    2.6%    T node::contextify::ContextifyScript::~ContextifyScript()
+      2   33.3%      Function: ^Mime.lookup /Users/eduardo/coder/backend-32170/node_modules/mime/mime.js:69:33
+      2  100.0%        Function: ^contentType /Users/eduardo/coder/backend-32170/node_modules/express/lib/response.js:619:32
+      2  100.0%          Function: ^sendStatus /Users/eduardo/coder/backend-32170/node_modules/express/lib/response.js:369:37
+      2  100.0%            Function: ^<anonymous> file:///Users/eduardo/coder/backend-32170/clase-32/profiler.js:60:5
+      1   16.7%      T node::contextify::ContextifyScript::~ContextifyScript()
+      1  100.0%        Function: ^readPackage node:internal/modules/cjs/loader:335:21
+      1  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:377:26
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1   16.7%      LazyCompile: ~header /Users/eduardo/coder/backend-32170/node_modules/express/lib/response.js:777:29
+      1  100.0%        LazyCompile: ~send /Users/eduardo/coder/backend-32170/node_modules/express/lib/response.js:111:25
+      1  100.0%          LazyCompile: ~sendStatus /Users/eduardo/coder/backend-32170/node_modules/express/lib/response.js:369:37
+      1  100.0%            LazyCompile: ~<anonymous> file:///Users/eduardo/coder/backend-32170/clase-32/profiler.js:5:21
+      1   16.7%      LazyCompile: ~_addHeaderLine node:_http_incoming:385:24
+      1  100.0%        LazyCompile: ~get node:_http_incoming:112:16
+      1  100.0%          LazyCompile: ~parserOnIncoming node:_http_server:965:26
+      1  100.0%            LazyCompile: ~parserOnHeadersComplete node:_http_common:72:33
+      1   16.7%      Function: ^resolve node:path:1091:10
+      1  100.0%        Function: ^readPackage node:internal/modules/cjs/loader:335:21
+      1  100.0%          Function: ^resolveExports node:internal/modules/cjs/loader:528:24
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:555:28
+      6    2.6%    LazyCompile: ~readSync node:fs:705:18
+      6  100.0%      LazyCompile: ~tryReadSync node:fs:444:21
+      6  100.0%        LazyCompile: ~readFileSync node:fs:465:22
+      6  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      6  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:1069:33
+      4    1.7%    Function: ^stat node:internal/modules/cjs/loader:161:14
+      2   50.0%      Function: ^tryFile node:internal/modules/cjs/loader:440:17
+      2  100.0%        Function: ^tryExtensions node:internal/modules/cjs/loader:456:23
+      1   50.0%          LazyCompile: ~tryPackage node:internal/modules/cjs/loader:394:20
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:555:28
+      1   50.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:555:28
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:948:35
+      2   50.0%      Function: ^Module._findPath node:internal/modules/cjs/loader:555:28
+      1   50.0%        LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:948:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:851:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1097:36
+      1   50.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:948:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:851:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1097:36
+      4    1.7%    Function: ^parserOnHeadersComplete node:_http_common:72:33
+      3    1.3%    LazyCompile: ~cache node:internal/http:24:15
+      3  100.0%      LazyCompile: ~utcDate node:internal/http:19:17
+      3  100.0%        LazyCompile: ~_storeHeader node:_http_outgoing:439:22
+      3  100.0%          LazyCompile: ~writeHead node:_http_server:338:19
+      3  100.0%            LazyCompile: ~_implicitHeader node:_http_server:333:68
+      3    1.3%    Function: ^sendStatus /Users/eduardo/coder/backend-32170/node_modules/express/lib/response.js:369:37
+      3  100.0%      Function: ^<anonymous> file:///Users/eduardo/coder/backend-32170/clase-32/profiler.js:60:5
+      3  100.0%        Function: ^job.ondone node:internal/crypto/pbkdf2:56:16
+      3    1.3%    Function: ^send /Users/eduardo/coder/backend-32170/node_modules/express/lib/response.js:111:25
+      3  100.0%      Function: ^sendStatus /Users/eduardo/coder/backend-32170/node_modules/express/lib/response.js:369:37
+      3  100.0%        Function: ^<anonymous> file:///Users/eduardo/coder/backend-32170/clase-32/profiler.js:60:5
+      3  100.0%          Function: ^job.ondone node:internal/crypto/pbkdf2:56:16
+      3    1.3%    Function: ^parserOnIncoming node:_http_server:965:26
+      3  100.0%      Function: ^parserOnHeadersComplete node:_http_common:72:33
+
+     39    3.8%  T node::builtins::BuiltinLoader::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     20   51.3%    Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+     17   85.0%      Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      5   29.4%        Function: ~<anonymous> node:http:1:1
+      5  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      5  100.0%            LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:264:25
+      2   11.8%        Function: ~<anonymous> node:internal/cluster/primary:1:1
+      2  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      2  100.0%            Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      2   11.8%        Function: ~<anonymous> node:child_process:1:1
+      2  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      2  100.0%            Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1    5.9%        LazyCompile: ~lazyWebCrypto node:crypto:125:23
+      1  100.0%          LazyCompile: ~get node:crypto:369:8
+      1  100.0%            T node::contextify::ContextifyScript::~ContextifyScript()
+      1    5.9%        LazyCompile: ~lazyLoadStreams node:fs:2907:25
+      1  100.0%          LazyCompile: ~get ReadStream node:fs:3050:17
+      1  100.0%            T node::contextify::ContextifyScript::~ContextifyScript()
+      1    5.9%        LazyCompile: ~initCJSParse node:internal/modules/esm/translators:58:28
+      1  100.0%          LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:147:60
+      1  100.0%            LazyCompile: ~moduleProvider node:internal/modules/esm/loader:452:28
+      1    5.9%        Function: ~<anonymous> node:internal/child_process:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      1  100.0%            Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1    5.9%        Function: ~<anonymous> node:cluster:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      1  100.0%            Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1    5.9%        Function: ~<anonymous> node:_http_outgoing:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      1  100.0%            Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1    5.9%        Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      1  100.0%            Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1    5.9%        Function: ~<anonymous> node:_http_client:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      1  100.0%            Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      2   10.0%      Function: ^compileForPublicLoader node:internal/bootstrap/loaders:264:25
+      2  100.0%        Function: ^loadBuiltinModule node:internal/modules/cjs/helpers:45:27
+      2  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:851:24
+      2  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1097:36
+      1    5.0%      LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:264:25
+      1  100.0%        LazyCompile: ~loadBuiltinModule node:internal/modules/cjs/helpers:45:27
+      1  100.0%          LazyCompile: ~Module._load node:internal/modules/cjs/loader:851:24
+      1  100.0%            LazyCompile: ~Module.require node:internal/modules/cjs/loader:1097:36
+     18   46.2%    Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      3   16.7%      Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      3  100.0%        Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      3  100.0%          Function: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      3  100.0%            Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      2   11.1%      LazyCompile: ~initializeCJSLoader node:internal/process/pre_execution:557:29
+      2  100.0%        LazyCompile: ~setupUserModules node:internal/process/pre_execution:120:26
+      2  100.0%          LazyCompile: ~prepareExecution node:internal/process/pre_execution:51:26
+      2  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:35:36
+      2   11.1%      Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      2  100.0%        Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      2  100.0%          Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      2  100.0%            Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      2   11.1%      Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      2  100.0%        Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      2  100.0%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      2  100.0%            Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      2   11.1%      Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      2  100.0%        Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      2  100.0%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      2  100.0%            Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      2   11.1%      Function: ~<anonymous> node:internal/fs/promises:1:1
+      2  100.0%        Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      2  100.0%          Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      2  100.0%            Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1    5.6%      LazyCompile: ~initializeSourceMapsHandlers node:internal/process/pre_execution:596:38
+      1  100.0%        LazyCompile: ~prepareExecution node:internal/process/pre_execution:51:26
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:35:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    5.6%      Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      1  100.0%        Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%          LazyCompile: ~initializeSourceMapsHandlers node:internal/process/pre_execution:596:38
+      1  100.0%            LazyCompile: ~prepareExecution node:internal/process/pre_execution:51:26
+      1    5.6%      Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      1  100.0%        Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      1  100.0%            Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1    5.6%      Function: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      1  100.0%        Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%          Function: ~<anonymous> node:internal/modules/esm/resolve:1:1
+      1  100.0%            Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1    5.6%      Function: ~<anonymous> node:internal/dns/utils:1:1
+      1  100.0%        Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%          LazyCompile: ~prepareExecution node:internal/process/pre_execution:51:26
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:35:36
+      1    2.6%    Function: ~<anonymous> node:internal/main/run_main_module:1:1
+
+     21    2.1%  /usr/lib/system/libsystem_pthread.dylib
+      2    9.5%    LazyCompile: ~toRealPath node:internal/modules/cjs/loader:449:20
+      2  100.0%      LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:555:28
+      2  100.0%        LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      2  100.0%          LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      2  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2    9.5%    LazyCompile: ~<anonymous> file:///Users/eduardo/coder/backend-32170/clase-32/profiler.js:5:21
+      2  100.0%      LazyCompile: ~handle /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/layer.js:86:49
+      2  100.0%        LazyCompile: ~next /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/route.js:116:16
+      2  100.0%          LazyCompile: ~dispatch /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/route.js:98:45
+      2  100.0%            LazyCompile: ~handle /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/layer.js:86:49
+      1    4.8%    T node::contextify::ContextifyScript::~ContextifyScript()
+      1  100.0%      LazyCompile: ~createStatusCodeList /Users/eduardo/coder/backend-32170/node_modules/statuses/index.js:82:31
+      1  100.0%        Function: ~<anonymous> /Users/eduardo/coder/backend-32170/node_modules/statuses/index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1173:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1    4.8%    LazyCompile: ~readPackage node:internal/modules/cjs/loader:335:21
+      1  100.0%      LazyCompile: ~readPackageScope node:internal/modules/cjs/loader:377:26
+      1  100.0%        LazyCompile: ~shouldUseESMLoader node:internal/modules/run_main:30:28
+      1  100.0%          LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.8%    LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:67:35
+      1    4.8%    LazyCompile: ~prepareExecution node:internal/process/pre_execution:51:26
+      1  100.0%      LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:35:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.8%    LazyCompile: ~patchProcessObject node:internal/process/pre_execution:134:28
+      1  100.0%      LazyCompile: ~prepareExecution node:internal/process/pre_execution:51:26
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:35:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.8%    LazyCompile: ~onParseError node:internal/url:564:22
+      1  100.0%      T node::contextify::ContextifyScript::~ContextifyScript()
+      1  100.0%        LazyCompile: ~URL node:internal/url:637:14
+      1  100.0%          LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1063:30
+      1  100.0%            LazyCompile: ~ObjectDefineProperty.__proto__ node:internal/modules/esm/loader:148:5
+      1    4.8%    LazyCompile: ~link node:internal/modules/esm/module_job:67:18
+      1  100.0%      T node::contextify::ContextifyScript::~ContextifyScript()
+      1    4.8%    LazyCompile: ~initAsyncResource node:internal/timers:154:27
+      1  100.0%      LazyCompile: ~Timeout node:internal/timers:164:14
+      1  100.0%        LazyCompile: ~setInterval node:timers:210:21
+      1  100.0%          LazyCompile: ~setupConnectionsTracking node:_http_server:478:34
+      1  100.0%            LazyCompile: ~Server node:_http_server:488:16
+      1    4.8%    LazyCompile: ~Readable node:internal/streams/readable:186:18
+      1  100.0%      LazyCompile: ~Duplex node:internal/streams/duplex:54:16
+      1  100.0%        LazyCompile: ~Socket node:net:336:16
+      1  100.0%          LazyCompile: ~WriteStream node:tty:84:21
+      1  100.0%            LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      1    4.8%    Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%      Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%        LazyCompile: ~initializeCJSLoader node:internal/process/pre_execution:557:29
+      1  100.0%          LazyCompile: ~setupUserModules node:internal/process/pre_execution:120:26
+      1  100.0%            LazyCompile: ~prepareExecution node:internal/process/pre_execution:51:26
+      1    4.8%    Function: ^job.ondone node:internal/crypto/pbkdf2:56:16
+      1    4.8%    Function: ^fastparse /Users/eduardo/coder/backend-32170/node_modules/parseurl/index.js:95:20
+      1  100.0%      LazyCompile: ~parseurl /Users/eduardo/coder/backend-32170/node_modules/parseurl/index.js:35:19
+      1  100.0%        LazyCompile: ~getPathname /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/index.js:537:21
+      1  100.0%          LazyCompile: ~next /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/index.js:177:16
+      1  100.0%            LazyCompile: ~handle /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/index.js:136:31
+
+     19    1.9%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     18   94.7%    Function: ^internalCompileFunction node:internal/vm:30:33
+     13   72.2%      Function: ^wrapSafe node:internal/modules/cjs/loader:1117:18
+     13  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1173:37
+      7   53.8%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      7  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1069:33
+      6   46.2%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      6  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1069:33
+      5   27.8%      LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1117:18
+      5  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1173:37
+      5  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      4   80.0%            Function: ^Module.load node:internal/modules/cjs/loader:1069:33
+      1   20.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:1069:33
+      1    5.3%    LazyCompile: ~internalCompileFunction node:internal/vm:30:33
+      1  100.0%      LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1117:18
+      1  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1173:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:1069:33
+
+     18    1.8%  T _semaphore_destroy
+      1    5.6%    LazyCompile: ~resolve node:internal/modules/esm/loader:789:16
+      1  100.0%      LazyCompile: ~getModuleJob node:internal/modules/esm/loader:410:21
+      1  100.0%        LazyCompile: ~import node:internal/modules/esm/loader:509:15
+      1  100.0%          LazyCompile: ~<anonymous> node:internal/modules/run_main:55:29
+      1  100.0%            LazyCompile: ~loadESM node:internal/process/esm_loader:88:41
+      1    5.6%    LazyCompile: ~processTimers node:internal/timers:492:25
+      1    5.6%    LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:67:35
+      1    5.6%    LazyCompile: ~prepareExecution node:internal/process/pre_execution:51:26
+      1  100.0%      LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:35:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    5.6%    LazyCompile: ~parseurl /Users/eduardo/coder/backend-32170/node_modules/parseurl/index.js:35:19
+      1  100.0%      LazyCompile: ~getPathname /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/index.js:537:21
+      1  100.0%        LazyCompile: ~next /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/index.js:177:16
+      1  100.0%          LazyCompile: ~handle /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/index.js:136:31
+      1  100.0%            LazyCompile: ~handle /Users/eduardo/coder/backend-32170/node_modules/express/lib/application.js:165:29
+      1    5.6%    LazyCompile: ~maybeMap /Users/eduardo/coder/backend-32170/node_modules/qs/lib/utils.js:230:33
+      1  100.0%      LazyCompile: ~parseQueryStringValues /Users/eduardo/coder/backend-32170/node_modules/qs/lib/parse.js:51:50
+      1  100.0%        LazyCompile: ~module.exports /Users/eduardo/coder/backend-32170/node_modules/qs/lib/parse.js:239:27
+      1  100.0%          LazyCompile: ~parseExtendedQueryString /Users/eduardo/coder/backend-32170/node_modules/express/lib/utils.js:289:34
+      1  100.0%            LazyCompile: ~query /Users/eduardo/coder/backend-32170/node_modules/express/lib/middleware/query.js:39:24
+      1    5.6%    LazyCompile: ~listOnTimeout node:internal/timers:512:25
+      1  100.0%      LazyCompile: ~processTimers node:internal/timers:492:25
+      1    5.6%    LazyCompile: ~formatWithOptions node:internal/util/inspect:2133:27
+      1  100.0%      LazyCompile: ~value node:internal/console/constructor:337:20
+      1  100.0%        LazyCompile: ~log node:internal/console/constructor:376:6
+      1  100.0%          T node::contextify::ContextifyScript::~ContextifyScript()
+      1  100.0%            LazyCompile: ~<anonymous> file:///Users/eduardo/coder/backend-32170/clase-32/profiler.js:72:18
+      1    5.6%    Function: ^job.ondone node:internal/crypto/pbkdf2:56:16
+      1    5.6%    Function: ^fastparse /Users/eduardo/coder/backend-32170/node_modules/parseurl/index.js:95:20
+      1  100.0%      LazyCompile: ~parseurl /Users/eduardo/coder/backend-32170/node_modules/parseurl/index.js:35:19
+      1  100.0%        LazyCompile: ~getPathname /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/index.js:537:21
+      1  100.0%          LazyCompile: ~next /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/index.js:177:16
+      1  100.0%            LazyCompile: ~handle /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/index.js:136:31
+
+     11    1.1%  /usr/lib/system/libsystem_c.dylib
+      2   18.2%    LazyCompile: ~ServerResponse node:_http_server:192:24
+      2  100.0%      LazyCompile: ~parserOnIncoming node:_http_server:965:26
+      2  100.0%        LazyCompile: ~parserOnHeadersComplete node:_http_common:72:33
+      1    9.1%    T node::contextify::ContextifyScript::~ContextifyScript()
+      1  100.0%      LazyCompile: ~merge /Users/eduardo/coder/backend-32170/node_modules/qs/lib/utils.js:47:27
+      1  100.0%        LazyCompile: ~module.exports /Users/eduardo/coder/backend-32170/node_modules/qs/lib/parse.js:239:27
+      1  100.0%          LazyCompile: ~parseExtendedQueryString /Users/eduardo/coder/backend-32170/node_modules/express/lib/utils.js:289:34
+      1  100.0%            LazyCompile: ~query /Users/eduardo/coder/backend-32170/node_modules/express/lib/middleware/query.js:39:24
+      1    9.1%    LazyCompile: ~value node:internal/console/constructor:337:20
+      1  100.0%      LazyCompile: ~log node:internal/console/constructor:376:6
+      1  100.0%        T node::contextify::ContextifyScript::~ContextifyScript()
+      1  100.0%          LazyCompile: ~<anonymous> file:///Users/eduardo/coder/backend-32170/clase-32/profiler.js:72:18
+      1  100.0%            LazyCompile: ~onceWrapper node:events:622:21
+      1    9.1%    LazyCompile: ~setInterval node:timers:210:21
+      1  100.0%      LazyCompile: ~setupConnectionsTracking node:_http_server:478:34
+      1  100.0%        LazyCompile: ~Server node:_http_server:488:16
+      1  100.0%          LazyCompile: ~createServer node:http:59:22
+      1  100.0%            LazyCompile: ~listen /Users/eduardo/coder/backend-32170/node_modules/express/lib/application.js:633:29
+      1    9.1%    LazyCompile: ~formatRaw node:internal/util/inspect:844:19
+      1  100.0%      LazyCompile: ~formatValue node:internal/util/inspect:766:21
+      1  100.0%        LazyCompile: ~inspect node:internal/util/inspect:310:17
+      1  100.0%          LazyCompile: ~formatWithOptionsInternal node:internal/util/inspect:2154:35
+      1  100.0%            LazyCompile: ~formatWithOptions node:internal/util/inspect:2133:27
+      1    9.1%    LazyCompile: ~entitytag /Users/eduardo/coder/backend-32170/node_modules/etag/index.js:39:20
+      1  100.0%      LazyCompile: ~etag /Users/eduardo/coder/backend-32170/node_modules/etag/index.js:70:15
+      1  100.0%        LazyCompile: ~generateETag /Users/eduardo/coder/backend-32170/node_modules/express/lib/utils.js:273:32
+      1  100.0%          LazyCompile: ~send /Users/eduardo/coder/backend-32170/node_modules/express/lib/response.js:111:25
+      1  100.0%            LazyCompile: ~sendStatus /Users/eduardo/coder/backend-32170/node_modules/express/lib/response.js:369:37
+      1    9.1%    LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      1  100.0%      LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:168:19
+      1  100.0%        Function: ~<anonymous> /Users/eduardo/coder/backend-32170/node_modules/debug/src/node.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1173:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1    9.1%    LazyCompile: ~Readable.push node:internal/streams/readable:233:35
+      1  100.0%      LazyCompile: ~parserOnMessageComplete node:_http_common:135:33
+      1    9.1%    Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%      Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%        Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      1  100.0%          Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      1    9.1%    Function: ~<anonymous> /Users/eduardo/coder/backend-32170/node_modules/body-parser/index.js:1:1
+      1  100.0%      LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1173:37
+      1  100.0%        LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1  100.0%          LazyCompile: ~Module.load node:internal/modules/cjs/loader:1069:33
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:851:24
+

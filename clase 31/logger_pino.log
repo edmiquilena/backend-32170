@@ -1,0 +1,9 @@
+{"level":30,"time":1675300490524,"pid":57872,"hostname":"Eduardos-MacBook-Pro.local","msg":"hola mundo"}
+{"level":20,"time":1675300490524,"pid":57872,"hostname":"Eduardos-MacBook-Pro.local","msg":"hola mundo!"}
+{"level":30,"time":1675300602912,"pid":58166,"hostname":"Eduardos-MacBook-Pro.local","msg":"hola mundo"}
+{"level":20,"time":1675300602912,"pid":58166,"hostname":"Eduardos-MacBook-Pro.local","msg":"hola mundo!"}
+{"level":30,"time":1675300624039,"pid":58231,"hostname":"Eduardos-MacBook-Pro.local","msg":"hola mundo"}
+{"level":50,"time":1675300624039,"pid":58231,"hostname":"Eduardos-MacBook-Pro.local","msg":"hola mundo!"}
+{"level":30,"time":1675300865548,"pid":58848,"hostname":"Eduardos-MacBook-Pro.local","msg":"hola mundo"}
+{"level":50,"time":1675300865548,"pid":58848,"hostname":"Eduardos-MacBook-Pro.local","msg":"hola mundo!"}
+{"level":50,"time":1675300865548,"pid":58848,"hostname":"Eduardos-MacBook-Pro.local","env":"prod","msg":"hola child!"}

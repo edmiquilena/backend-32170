@@ -1,0 +1,147 @@
+Statistical profiling result from bloq-log.log, (48361 ticks, 4 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     14    0.0%          /usr/lib/system/libsystem_pthread.dylib
+     14    0.0%          /usr/lib/system/libsystem_kernel.dylib
+     14    0.0%          /usr/lib/system/libsystem_c.dylib
+      7    0.0%          /usr/lib/system/libsystem_malloc.dylib
+      1    0.0%          /usr/lib/system/libsystem_platform.dylib
+      1    0.0%          /usr/lib/libc++.1.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      5    0.0%    0.0%  LazyCompile: *next /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/index.js:177:16
+      2    0.0%    0.0%  RegExp: ^\/auth-bloq\/?$
+      2    0.0%    0.0%  RegExp: ; *([!#$%&'*+.^_`|~0-9A-Za-z-]+) *= *("(?:[\u000b\u0020\u0021\u0023-\u005b\u005d-\u007e\u0080-\u00ff]|\\[\u000b\u0020-\u00ff])*"|[!#$%&'*+.^_`|~0-9A-Za-z-]+) *
+      2    0.0%    0.0%  LazyCompile: *nextTick node:internal/process/task_queues:103:18
+      2    0.0%    0.0%  LazyCompile: *fastparse /Users/eduardo/coder/backend-32170/node_modules/parseurl/index.js:95:20
+      2    0.0%    0.0%  LazyCompile: *_write node:internal/streams/writable:286:16
+      2    0.0%    0.0%  Function: ^resume node:internal/streams/readable:989:16
+      2    0.0%    0.0%  Function: ^parserOnIncoming node:_http_server:965:26
+      2    0.0%    0.0%  Function: ^onParserExecuteCommon node:_http_server:844:31
+      2    0.0%    0.0%  Function: ^getEncodingOps node:buffer:688:24
+      2    0.0%    0.0%  Function: ^fromString node:buffer:441:20
+      2    0.0%    0.0%  Function: ^alignPool node:buffer:167:19
+      2    0.0%    0.0%  Function: ^_unrefTimer node:net:484:52
+      2    0.0%    0.0%  Function: ^_addListener node:events:541:22
+      2    0.0%    0.0%  Function: ^Socket._writev node:net:929:36
+      2    0.0%    0.0%  Function: ^Hash node:internal/crypto/hash:62:14
+      1    0.0%    0.0%  RegExp: ^text\/|^application\/(javascript|json)
+      1    0.0%    0.0%  RegExp: ^\/newUser\/?$
+      1    0.0%    0.0%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      1    0.0%    0.0%  RegExp: ^.*[\.\/\\]
+      1    0.0%    0.0%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.0%    0.0%  RegExp: [!@#$%^&*]
+      1    0.0%    0.0%  RegExp: (\[[^[\]]*])
+      1    0.0%    0.0%  LazyCompile: *writevGeneric node:internal/stream_base_commons:122:23
+      1    0.0%    0.0%  LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      1    0.0%    0.0%  LazyCompile: *parseQueryStringValues /Users/eduardo/coder/backend-32170/node_modules/qs/lib/parse.js:51:50
+      1    0.0%    0.0%  LazyCompile: *handle /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/index.js:136:31
+      1    0.0%    0.0%  LazyCompile: *_addListener node:events:541:22
+      1    0.0%    0.0%  Function: ^writevGeneric node:internal/stream_base_commons:122:23
+      1    0.0%    0.0%  Function: ^write_ node:_http_outgoing:850:16
+      1    0.0%    0.0%  Function: ^updateOutgoingData node:_http_server:704:28
+      1    0.0%    0.0%  Function: ^trim_prefix /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/index.js:293:23
+      1    0.0%    0.0%  Function: ^socketOnDrain node:_http_server:709:23
+      1    0.0%    0.0%  Function: ^processPromiseRejections node:internal/process/promises:220:34
+      1    0.0%    0.0%  Function: ^parseQueryStringKeys /Users/eduardo/coder/backend-32170/node_modules/qs/lib/parse.js:150:46
+      1    0.0%    0.0%  Function: ^parseObject /Users/eduardo/coder/backend-32170/node_modules/qs/lib/parse.js:115:28
+      1    0.0%    0.0%  Function: ^normalizeEncoding node:internal/util:164:27
+      1    0.0%    0.0%  Function: ^noop node:internal/util/debuglog:47:14
+      1    0.0%    0.0%  Function: ^next /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/index.js:177:16
+      1    0.0%    0.0%  Function: ^newAsyncId node:internal/async_hooks:416:20
+      1    0.0%    0.0%  Function: ^module.exports /Users/eduardo/coder/backend-32170/node_modules/qs/lib/parse.js:239:27
+      1    0.0%    0.0%  Function: ^initAsyncResource node:internal/timers:154:27
+      1    0.0%    0.0%  Function: ^getStack /Users/eduardo/coder/backend-32170/node_modules/depd/index.js:381:19
+      1    0.0%    0.0%  Function: ^getProtohost /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/index.js:546:22
+      1    0.0%    0.0%  Function: ^get node:internal/streams/readable:1155:8
+      1    0.0%    0.0%  Function: ^fromStringFast node:buffer:422:24
+      1    0.0%    0.0%  Function: ^fresh /Users/eduardo/coder/backend-32170/node_modules/parseurl/index.js:153:16
+      1    0.0%    0.0%  Function: ^finalhandler /Users/eduardo/coder/backend-32170/node_modules/finalhandler/index.js:77:23
+      1    0.0%    0.0%  Function: ^expressInit /Users/eduardo/coder/backend-32170/node_modules/express/lib/middleware/init.js:29:30
+      1    0.0%    0.0%  Function: ^entitytag /Users/eduardo/coder/backend-32170/node_modules/etag/index.js:39:20
+      1    0.0%    0.0%  Function: ^endReadable node:internal/streams/readable:1342:21
+      1    0.0%    0.0%  Function: ^digest node:internal/crypto/hash:119:40
+      1    0.0%    0.0%  Function: ^contentType /Users/eduardo/coder/backend-32170/node_modules/express/lib/response.js:619:32
+      1    0.0%    0.0%  Function: ^compact /Users/eduardo/coder/backend-32170/node_modules/qs/lib/utils.js:190:31
+      1    0.0%    0.0%  Function: ^closeSync node:fs:541:19
+      1    0.0%    0.0%  Function: ^afterWriteDispatched node:internal/stream_base_commons:155:30
+      1    0.0%    0.0%  Function: ^addListener node:events:604:58
+      1    0.0%    0.0%  Function: ^Writable.write node:internal/streams/writable:336:36
+      1    0.0%    0.0%  Function: ^Writable.cork node:internal/streams/writable:340:35
+      1    0.0%    0.0%  Function: ^EventEmitter node:events:212:22
+      1    0.0%    0.0%  Function: ^<anonymous> /Users/eduardo/coder/backend-32170/node_modules/qs/lib/utils.js:92:48
+
+ [C++]:
+   ticks  total  nonlib   name
+  48051   99.4%   99.5%  T node::contextify::ContextifyScript::~ContextifyScript()
+     53    0.1%    0.1%  T _posix_spawn_file_actions_adddup2
+     36    0.1%    0.1%  T node::builtins::BuiltinLoader::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     15    0.0%    0.0%  T _semaphore_destroy
+     14    0.0%    0.0%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     14    0.0%    0.0%  T _mig_dealloc_reply_port
+      7    0.0%    0.0%  T _mach_get_times
+      5    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      5    0.0%    0.0%  T _kdebug_trace_string
+      4    0.0%    0.0%  T _issetugid
+      3    0.0%    0.0%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      3    0.0%    0.0%  T _host_request_notification
+      2    0.0%    0.0%  t ___pfz_setup
+      1    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)2>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t std::__1::vector<unsigned long, std::__1::allocator<unsigned long> >::__append(unsigned long)
+      1    0.0%    0.0%  t std::__1::deque<unsigned long, std::__1::allocator<unsigned long> >::__add_back_capacity()
+      1    0.0%    0.0%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      1    0.0%    0.0%  t node::Buffer::(anonymous namespace)::ByteLengthUtf8(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t __os_once_gate_broadcast
+      1    0.0%    0.0%  T node::NodeArrayBufferAllocator::Allocate(unsigned long)
+      1    0.0%    0.0%  T node::InternalCallbackScope::~InternalCallbackScope()
+      1    0.0%    0.0%  T node::Environment::RunWeakRefCleanup()
+      1    0.0%    0.0%  T node::AsyncWrap::EmitAfter(node::Environment*, double)
+      1    0.0%    0.0%  T node::AsyncHooks::DefaultTriggerAsyncIdScope::DefaultTriggerAsyncIdScope(node::AsyncWrap*)
+      1    0.0%    0.0%  T _thread_destruct_special_reply_port
+      1    0.0%    0.0%  T _mach_vm_map
+
+ [Summary]:
+   ticks  total  nonlib   name
+     80    0.2%    0.2%  JavaScript
+  48226   99.7%   99.8%  C++
+     28    0.1%    0.1%  GC
+     51    0.1%          Shared libraries
+      4    0.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+  48011   99.8%   99.3%  T node::contextify::ContextifyScript::~ContextifyScript()
+     36    0.1%    0.1%  T node::builtins::BuiltinLoader::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     14    0.0%    0.0%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     14    0.0%    0.0%  T _mig_dealloc_reply_port
+     10    0.0%    0.0%  T node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+      8    0.0%    0.0%  T _semaphore_destroy
+      5    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      3    0.0%    0.0%  T _mach_get_times
+      1    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)2>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      1    0.0%    0.0%  t node::Buffer::(anonymous namespace)::ByteLengthUtf8(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t __os_once_gate_broadcast
+      1    0.0%    0.0%  t ___pfz_setup
+      1    0.0%    0.0%  T node::NodeArrayBufferAllocator::Allocate(unsigned long)
+      1    0.0%    0.0%  T node::AsyncHooks::DefaultTriggerAsyncIdScope::DefaultTriggerAsyncIdScope(node::AsyncWrap*)
+      1    0.0%    0.0%  T _thread_destruct_special_reply_port
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  48051   99.4%  T node::contextify::ContextifyScript::~ContextifyScript()
+  47183   98.2%    Function: ^pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+  47138   99.9%      Function: ^<anonymous> file:///Users/eduardo/coder/backend-32170/clase-32/profiler.js:21:23
+  47138  100.0%        Function: ^handle /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/layer.js:86:49
+  47069   99.9%          Function: ^next /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/route.js:116:16
+  47069  100.0%            Function: ^dispatch /Users/eduardo/coder/backend-32170/node_modules/express/lib/router/route.js:98:45
+

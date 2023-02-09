@@ -1,0 +1,4 @@
+artillery quick --count 50 --num 40 http://localhost:8080/?max=1000000 --output cluster.txt
+
+
+artillery quick --count 50 --num 40 http://localhost:8080/auth-bloq?username=eduardo&password=12345 --output profiler.txt
