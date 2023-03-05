@@ -14,10 +14,14 @@ const passportConfig = (passport, userService) => {
 
   // creo las funciones de serialize/deserialize user
   passport.serializeUser((user, done) => {
+    console.log("e", user)
     done(null, user._id);
   });
   passport.deserializeUser(async (id, done) => {
-    return done(null, await userService.getUserById(id));
+    console.log(id)
+    const user = await userService.getUserById(id)
+    console.log(user)
+    return done(null, user);
   });
 };
 

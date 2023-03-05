@@ -10,12 +10,10 @@ export const login = async (email, password, done) => {
   try {
     const user = await userContainer.getByField("email", email);
     if (user) {
-  
       const isValidPassword = await bcrypt.compare(password, user.password);
       if (!isValidPassword) return done(null, false);
       return done(null, user);
     } else {
-   
       return done(null, false);
     }
   } catch (error) {
@@ -41,7 +39,7 @@ export const signup = async (req, email, password, done) => {
         avatar: req.file.filename,
       };
       const newUser = await userContainer.save(userData);
-     
+
       return done(null, newUser);
     }
   } catch (error) {
@@ -57,5 +55,6 @@ export const getUserByEmail = async (email) => {
 
 export const getUserById = async (id) => {
   const user = await userContainer.getById(id);
+  console.log(user);
   return user;
 };

@@ -1,4 +1,5 @@
 import MongoDbContainer from "../../containers/mongo.container.js";
+import pokemonDto from "../../dto/pokemon.dto.js";
 
 class PokemonDaoMongoDb extends MongoDbContainer {
   constructor() {

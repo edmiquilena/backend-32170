@@ -1,11 +1,18 @@
+/**
+ * @openapi
+ *  /boxes:
+ *      get:
+ *          description: Obtiene la caja del usuario con sesion iniciada
+ *
+ *
+ */
+
 import { Router } from "express";
-import * as BoxController from '../controllers/box.controller.js'
+import * as BoxController from "../controllers/box.controller.js";
 const BoxRouter = new Router();
 
-
-BoxRouter
-.get('/', BoxController.getByLoggedUser)
-.post('/', BoxController.createUserBox)
-.delete('/', BoxController.deleteUserBox)
-.put('/:type', BoxController.addPokemonToBox)
+BoxRouter.get("/", BoxController.getByLoggedUser)
+  .post("/", BoxController.createUserBox)
+  .delete("/", BoxController.deleteUserBox)
+  .put("/:type", BoxController.addPokemonToBox);
 export default BoxRouter;
